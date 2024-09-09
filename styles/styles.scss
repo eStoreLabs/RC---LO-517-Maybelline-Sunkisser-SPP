@@ -2,7 +2,7 @@
 
 $regular: 'Montserrat', sans-serif;
 $secondary: 'Barlow Condensed', sans-serif;
-$glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
+
 
 #es-rc #es-rc-content {
     font-family: 'Montserrat', sans-serif;
@@ -127,164 +127,11 @@ $glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
         }
     }
 
-    /**************************************/
-    /*********** header styles ************/
-    /**************************************/
-    .es-header {
-        font-family: $secondary;
-        font-weight: 400;
-        text-align: center;
-        font-size: 32px;
-        padding: 1.5em;
-        background-color: #FBC1C2;
-        background-image: url("../images/items-2.png");
-        background-size: cover;
-        background-position: right;
-        background-repeat: no-repeat;
 
-        span {
-            font-weight: 700;
-        }
 
-        @media (min-width: 768px) {
-            font-size: 44px;
-        }
-    }
+  
 
-    /**************************************/
-    /********** features styles ***********/
-    /**************************************/
-    .es-features {
-        background-color: #C55E71;
-        color: #FFF;
-
-        &__square {
-            aspect-ratio: 1/1;
-            justify-content: center;
-        }
-
-        &__square--1,
-        &__square--4 {
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-        }
-
-        &__text {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        &__text--top {
-            font-size: 32px;
-            font-weight: 700;
-        }
-
-        &__text--big {
-            font-size: 50px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        @media (min-width: 576px) {
-
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-
-            &__square {
-                width: 50%;
-            }
-
-            &__square--1 {
-                order: 1;
-            }
-
-            &__square--2 {
-                order: 2;
-            }
-
-            &__square--3 {
-                order: 3;
-            }
-
-            &__square--4 {
-                order: 4;
-            }
-
-        }
-
-        @media (min-width: 576px) and (max-width: 767px) {
-            &__text--top {
-                font-size: 22px;
-            }
-
-            &__text--big {
-                font-size: 38px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            &__text--top {
-                font-size: 29px;
-            }
-
-            &__text--big {
-                font-size: 50px;
-            }
-        }
-
-        @media (min-width: 882px) {
-            &__text--top {
-                font-size: 36px;
-            }
-
-            &__text--big {
-                font-size: 58px;
-            }
-        }
-    }
-
-    /**************************************/
-    /********** effects styles ************/
-    /**************************************/
-    .es-effects {
-        background-color: rgb(197, 94, 113);
-        background-image: url("../images/elements-1.png"), linear-gradient(11deg, rgba(197, 94, 113, 1) 0%, rgba(246, 194, 198, 1) 50%, rgba(197, 94, 113, 1) 100%);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        background-attachment: fixed;
-
-        &__text {
-            font-family: $secondary;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 32px;
-            padding-block: 32px;
-            padding-inline: 16px;
-
-            span {
-                font-weight: 700;
-            }
-        }
-
-        @media (min-width: 576px) {
-            background-position: left;
-            background-size: contain;
-
-            &__BA {
-                max-width: 55%;
-                margin-left: auto;
-            }
-
-            &__text {
-                font-size: 40px;
-            }
-        }
-    }
+  
 
     /**************************************/
     /*********** colors styles ************/
@@ -419,77 +266,6 @@ $glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
         }
     }
 
-    /**************************************/
-    /******* comparison styles ************/
-    /**************************************/
-    .es-compare {
-        color: #FFF;
-        position: relative;
-
-        &:after {
-            content: "";
-            background-image: url("../images/pepper-2.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 40px;
-            height: 170px;
-            position: absolute;
-            bottom: -23px;
-            right: 0;
-        }
-
-        &__gradient-bg {
-            background: linear-gradient(90deg, rgba(246, 194, 198, 1) 0%, rgba(240, 181, 185, 1) 25%, rgba(218, 135, 145, 1) 50%, rgba(199, 98, 114, 1) 75%, rgba(197, 94, 113, 1) 100%);
-            padding-top: 32px;
-        }
-
-        &__pink-bg {
-            background-color: #FBC1C2;
-            padding-top: 16px;
-        }
-
-        .es-colors__CTA {
-            display: block;
-            width: 45%;
-            max-width: 200px;
-            transform: translate(-25%, 0);
-            margin-left: 15%;
-        }
-
-        .es-colors__CTA:hover {
-            background-color: #FFF;
-            color: #000;
-            box-shadow: inset 0px 0px 0px 2px #000;
-        }
-
-        @media (min-width: 576px) {
-            position: relative;
-
-            &:after {
-                width: 50px;
-                height: 200px;
-                bottom: -67px;
-            }
-
-            .es-title {
-                margin-bottom: -32px;
-                position: relative;
-                z-index: 1;
-            }
-        }
-
-        @media (min-width: 768px) {
-            &:after {
-                width: 70px;
-                height: 270px;
-                bottom: -99px;
-            }
-
-            .es-title {
-                margin-bottom: -48px;
-            }
-        }
-    }
 
     /**************************************/
     /******* cross sell styles ************/
@@ -592,52 +368,6 @@ $glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
         }
     }
 
-    /**************************************/
-    /************* fire styles ************/
-    /**************************************/
-
-    .es-fire::before,
-    .es-fire::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-    }
-
-    .es-fire::before {
-        content: "";
-        background-image: $glitter, $glitter,
-            linear-gradient(0deg,
-                white 0px,
-                #ff8951 5px,
-                #dcbc169c 30%,
-                transparent 70%),
-            radial-gradient(ellipse at bottom, transparent 30%, black 60%);
-        background-size: 350px 500px, 400px 650px, 100% 70%, 100% 100%;
-        background-blend-mode: hard-light, color-dodge, multiply;
-        background-position: 0px 0px, 0px 0px, var(--gradientPos);
-        background-repeat: repeat, repeat, no-repeat, no-repeat;
-        mix-blend-mode: color-dodge;
-        filter: brightness(3.7) blur(7px) contrast(6);
-        animation: fire 7s linear infinite;
-        // box-shadow: inset 0 -40px 50px -60px #63bbc5;
-    }
-
-    .es-fire {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-
-    @keyframes fire {
-        0% {
-            background-position: center 0px, center 0px, 50% 100%, center center;
-        }
-
-        100% {
-            background-position: center -500px, center -650px, 50% 100%, center center;
-        }
-    }
 
     /**************************************/
     /*********** footer styles ************/
