@@ -65,6 +65,12 @@ $color-main: #DD796B;
         }
     }
 
+    @media (min-width: 768px) {
+        .es-text-stroke {
+            font-size: 38px;
+        }
+    }
+
     .es-text-accent {
         font-family: $secondary;
         text-transform: uppercase;
@@ -213,8 +219,8 @@ $color-main: #DD796B;
             background-size: cover;
             background-position: center;
             aspect-ratio: 13/10;
-
             padding-top: 24px;
+            position: relative;
 
             .es-text-accent {
                 margin-top: 8px;
@@ -293,6 +299,55 @@ $color-main: #DD796B;
                 top: -2px;
                 left: 0;
             }
+        }
+
+        .es-features::after {
+            content: "";
+            background-image: url('../images/leaf-1.png');
+            background-size: contain;
+            position: absolute;
+            bottom: -17%;
+            right: 0;
+            width: 267px;
+            height: 269px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .es-features {
+            aspect-ratio: unset;
+            min-height: 575px;
+            background-position: bottom;
+
+            &__wrapper {
+                height: 350px;
+                padding: 32px;
+            }
+
+            .es-text-accent {
+                font-size: 38px;
+            }
+
+            &__single {
+                font-size: 28px;
+                max-width: 190px;
+            }
+        }
+
+        .es-features::after {
+            width: 363px;
+            height: 331px;
+        }
+    }
+
+    @media (min-width: 888px) {
+        .es-features {
+            min-height: 666px;
+        }
+
+        .es-features__single {
+            font-size: 32px;
+            max-width: 210px;
         }
     }
 

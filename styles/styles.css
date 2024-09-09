@@ -65,6 +65,11 @@
     font-size: 32px;
   }
 }
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-text-stroke {
+    font-size: 38px;
+  }
+}
 #es-rc #es-rc-content .es-text-accent {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -183,6 +188,7 @@
     background-position: center;
     aspect-ratio: 13/10;
     padding-top: 24px;
+    position: relative;
   }
   #es-rc #es-rc-content .es-features .es-text-accent {
     margin-top: 8px;
@@ -248,6 +254,47 @@
     position: absolute;
     top: -2px;
     left: 0;
+  }
+  #es-rc #es-rc-content .es-features::after {
+    content: "";
+    background-image: url("../images/leaf-1.png");
+    background-size: contain;
+    position: absolute;
+    bottom: -17%;
+    right: 0;
+    width: 267px;
+    height: 269px;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-features {
+    aspect-ratio: unset;
+    min-height: 575px;
+    background-position: bottom;
+  }
+  #es-rc #es-rc-content .es-features__wrapper {
+    height: 350px;
+    padding: 32px;
+  }
+  #es-rc #es-rc-content .es-features .es-text-accent {
+    font-size: 38px;
+  }
+  #es-rc #es-rc-content .es-features__single {
+    font-size: 28px;
+    max-width: 190px;
+  }
+  #es-rc #es-rc-content .es-features::after {
+    width: 363px;
+    height: 331px;
+  }
+}
+@media (min-width: 888px) {
+  #es-rc #es-rc-content .es-features {
+    min-height: 666px;
+  }
+  #es-rc #es-rc-content .es-features__single {
+    font-size: 32px;
+    max-width: 210px;
   }
 }
 #es-rc #es-rc-content .es-colors {
