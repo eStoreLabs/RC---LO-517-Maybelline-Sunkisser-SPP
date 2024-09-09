@@ -2,7 +2,7 @@
 
 $regular: 'Montserrat', sans-serif;
 $secondary: 'Barlow Condensed', sans-serif;
-
+$color-main: #DD796B;
 
 #es-rc #es-rc-content {
     font-family: 'Montserrat', sans-serif;
@@ -42,6 +42,34 @@ $secondary: 'Barlow Condensed', sans-serif;
         font-weight: 700;
     }
 
+    .es-text-outline {
+        width: 100%;
+        text-transform: uppercase;
+        font-family: $regular;
+        font-weight: 700;
+    }
+
+    .es-text-stroke {
+        text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+        color: $color-main;
+        text-transform: uppercase;
+        font-family: $regular;
+        font-weight: 700;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    @media (min-width: 576px) {
+        .es-text-stroke {
+            font-size: 32px;
+        }
+    }
+
+    .es-text-accent {
+        font-family: $secondary;
+        text-transform: uppercase;
+    }
+
     /**************************************/
     /************* kv styles **************/
     /**************************************/
@@ -57,17 +85,20 @@ $secondary: 'Barlow Condensed', sans-serif;
 
         &__left {
             position: relative;
+        }
 
+        &__text {
+            position: absolute;
+            bottom: 0;
+            padding: 16px;
+            width: 100%;
         }
 
         &__headline {
             text-transform: uppercase;
             color: #FFF;
-            position: absolute;
-            bottom: 0;
             font-weight: 700;
-            font-size: 22px;
-            padding: 16px;
+            font-size: clamp(0.875rem, -0.2599rem + 6.9841vw, 2.25rem);
         }
 
         &__right {
@@ -76,9 +107,28 @@ $secondary: 'Barlow Condensed', sans-serif;
 
         &__packshot {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            width: 43%;
+        }
+
+        &__right .es-kv__text {
+            font-family: $secondary;
+            text-transform: uppercase;
+            font-size: clamp(1.375rem, -0.2758rem + 10.1587vw, 3.375rem);
+            font-weight: 700;
+            color: #FFF;
+            text-align: right;
+            right: 10%;
+            bottom: 5%;
+        }
+
+        &__right .es-kv__text--bg {
+            background-color: $color-main;
+            width: max-content;
+            margin-left: auto;
+            padding: 0px 4px;
         }
 
         @media (min-width: 576px) {
@@ -93,10 +143,7 @@ $secondary: 'Barlow Condensed', sans-serif;
                 z-index: 2;
             }
 
-            &__packshot {
-                bottom: -11px;
-                left: -8px;
-            }
+
 
             &__container {
                 display: flex;
@@ -104,34 +151,150 @@ $secondary: 'Barlow Condensed', sans-serif;
             }
 
             &__headline {
-                font-size: 18px;
+                font-size: clamp(1rem, -0.4257rem + 3.9604vw, 2rem);
+            }
+
+            &__right .es-kv__text {
+                font-size: clamp(1.25rem, 0.0025rem + 3.4653vw, 2.125rem);
             }
         }
 
-        @media (min-width: 768px) {
-            &__headline {
-                font-size: 28px;
-            }
+    }
+
+    /**************************************/
+    /********* features styles ************/
+    /**************************************/
+    .es-features {
+        background-color: $color-main;
+        padding: 1rem;
+
+        &__header {
+            color: #FFF;
+            text-align: center;
         }
 
-        @media (min-width: 882px) {
-            &__headline {
-                font-size: 32px;
-            }
+        .es-text-accent {
+            font-size: 24px;
         }
 
-        @media (min-width: 992px) {
-            &__headline {
-                font-size: 36px;
-            }
+        &__desc {
+            margin-top: 16px;
+        }
+
+        &__wrapper {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        &__single {
+            font-family: $secondary;
+            text-transform: uppercase;
+            color: #FFF;
+            font-size: 20px;
+            position: relative;
+            border-bottom: 1px solid #FFF;
+            width: 60%;
+            padding-bottom: 4px;
+        }
+
+        &__line {
+            display: none;
         }
     }
 
 
+    @media (min-width: 576px) {
+        .es-features {
+            background-image: url('../images/features-bg.png');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 13/10;
 
-  
+            padding-top: 24px;
 
-  
+            .es-text-accent {
+                margin-top: 8px;
+                font-size: 32px;
+            }
+
+            &__wrapper {
+                justify-content: center;
+                height: 100%;
+            }
+
+            &__single {
+                max-width: 31%;
+                font-size: 24px;
+                border-bottom: none;
+                position: relative;
+            }
+
+
+
+            &__single:nth-of-type(1) {
+                align-self: flex-start;
+                text-align: left;
+            }
+
+            &__single:nth-of-type(2) {
+                align-self: flex-end;
+                text-align: right;
+                flex-direction: row-reverse;
+            }
+
+            &__single:nth-of-type(3) {
+                align-self: flex-start;
+                text-align: left;
+            }
+
+            &__line {
+                content: "";
+                min-width: 50px;
+                height: 1px;
+                background-color: #FFF;
+                margin-right: 4px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: -24%;
+            }
+
+            &__line::after {
+                content: "";
+                min-width: 4px;
+                height: 4px;
+                background-color: #FFF;
+                border-radius: 50%;
+                position: absolute;
+                top: -2px;
+                right: 0;
+            }
+
+            &__single:nth-of-type(2) .es-features__line {
+                right: unset;
+                left: 0;
+            }
+
+            &__single:nth-of-type(2) .es-features__line::after {
+                display: none;
+            }
+
+            &__single:nth-of-type(2) .es-features__line::before {
+                content: "";
+                min-width: 4px;
+                height: 4px;
+                background-color: #FFF;
+                border-radius: 50%;
+                position: absolute;
+                top: -2px;
+                left: 0;
+            }
+        }
+    }
 
     /**************************************/
     /*********** colors styles ************/
