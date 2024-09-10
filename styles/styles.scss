@@ -439,6 +439,11 @@ $color-secondary: #d6b19e;
         .es-colors__single {
             max-width: 150px;
         }
+
+        .es-colors__text {
+            font-size: 24px;
+            width: 85%;
+        }
     }
 
     @media (min-width: 988px) {
