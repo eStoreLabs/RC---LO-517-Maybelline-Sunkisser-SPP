@@ -19,6 +19,12 @@
   /*********** colors styles ************/
   /**************************************/
   /**************************************/
+  /************ steps styles ************/
+  /**************************************/
+  /**************************************/
+  /********** effects styles ************/
+  /**************************************/
+  /**************************************/
   /******* cross sell styles ************/
   /**************************************/
   /**************************************/
@@ -298,9 +304,15 @@
     max-width: 210px;
   }
 }
+#es-rc #es-rc-content .es-bg-wrapper {
+  background-image: url("../images/shade-bg.png");
+  background-size: cover;
+}
 #es-rc #es-rc-content .es-colors {
   padding-block: 50px;
-  background-image: url("../images/shade-bg.png");
+}
+#es-rc #es-rc-content .es-colors .es-text-stroke {
+  color: #d6b19e;
 }
 #es-rc #es-rc-content .es-colors__product img {
   max-height: 300px;
@@ -310,7 +322,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  row-gap: 32px;
   flex-wrap: wrap;
 }
 #es-rc #es-rc-content .es-colors__single {
@@ -319,8 +331,24 @@
   align-items: center;
   max-width: 215px;
 }
+#es-rc #es-rc-content .es-colors__product {
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-colors__product img {
+  transition: all 300ms ease-in-out;
+}
+#es-rc #es-rc-content .es-colors__product img:hover {
+  scale: 1.1;
+}
 #es-rc #es-rc-content .es-colors__shade {
   position: relative;
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-colors__shade img {
+  transition: all 300ms ease-in-out;
+}
+#es-rc #es-rc-content .es-colors__shade img:hover {
+  scale: 1.1;
 }
 #es-rc #es-rc-content .es-colors__text {
   position: absolute;
@@ -334,8 +362,202 @@
   font-size: 30px;
 }
 @media (min-width: 576px) {
+  #es-rc #es-rc-content .es-colors__product img {
+    max-height: 360px;
+  }
   #es-rc #es-rc-content .es-colors__single {
     max-width: 150px;
+  }
+}
+#es-rc #es-rc-content .es-steps {
+  color: #FFF;
+}
+#es-rc #es-rc-content .es-steps .es-title {
+  margin-bottom: 0.2em;
+}
+#es-rc #es-rc-content .es-steps .es-text-stroke {
+  color: #c28f7c;
+}
+#es-rc #es-rc-content .es-steps__container {
+  display: flex;
+  flex-direction: column;
+  padding-block: 32px;
+}
+#es-rc #es-rc-content .es-steps__single {
+  position: relative;
+}
+#es-rc #es-rc-content .es-steps__wrapper {
+  position: relative;
+}
+#es-rc #es-rc-content .es-steps__img {
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-steps__img img {
+  transition: all 300ms ease-in-out;
+}
+#es-rc #es-rc-content .es-steps__img img:hover {
+  scale: 1.1;
+}
+#es-rc #es-rc-content .es-steps__number {
+  font-size: 72px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  bottom: -32px;
+  left: -14px;
+}
+#es-rc #es-rc-content .es-steps__text {
+  text-align: center;
+  text-wrap: balance;
+  padding: 16px;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-steps .es-text-stroke {
+    color: #d9b2a0;
+  }
+  #es-rc #es-rc-content .es-steps__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 32px;
+    gap: 32px;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-steps__container::after {
+    position: absolute;
+    content: "";
+    background-image: url("../images/leaf-1.png");
+    background-size: contain;
+    width: 240px;
+    height: 218px;
+    bottom: -26%;
+    left: 0;
+    z-index: 2;
+    transform: scaleX(-1);
+  }
+  #es-rc #es-rc-content .es-steps__single {
+    flex-basis: 45%;
+  }
+  #es-rc #es-rc-content .es-steps__container figure {
+    padding: 0;
+    margin: 0;
+  }
+  #es-rc #es-rc-content .es-steps__text {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-steps__number {
+    font-size: 110px;
+    bottom: -51px;
+    left: -20px;
+  }
+  #es-rc #es-rc-content .es-steps__text {
+    padding: 24px;
+  }
+  #es-rc #es-rc-content .es-steps__container::after {
+    width: 300px;
+    height: 273px;
+    bottom: -47%;
+  }
+}
+@media (min-width: 930px) {
+  #es-rc #es-rc-content .es-steps__container::after {
+    left: -5%;
+    width: 363px;
+    height: 331px;
+  }
+  #es-rc #es-rc-content .es-steps__text {
+    font-size: 14px;
+  }
+}
+#es-rc #es-rc-content .es-effects {
+  color: #FFF;
+}
+#es-rc #es-rc-content .es-effects .es-text-stroke {
+  color: #b8816e;
+}
+#es-rc #es-rc-content .es-effects__container {
+  display: flex;
+  flex-direction: column;
+}
+#es-rc #es-rc-content .es-effects__single {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  padding: 16px;
+}
+#es-rc #es-rc-content .es-effects__number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  justify-self: right;
+}
+#es-rc #es-rc-content .es-effects__text {
+  border-top: 1px solid #FFF;
+  padding-top: 8px;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-effects .es-text-stroke {
+    max-width: 60%;
+    margin-left: auto;
+    color: #cda08d;
+  }
+  #es-rc #es-rc-content .es-effects__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  #es-rc #es-rc-content .es-effects__container {
+    z-index: 1;
+    max-width: 60%;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+  #es-rc #es-rc-content .es-effects__pack {
+    position: absolute;
+    bottom: 0;
+    left: -17%;
+    z-index: 0;
+  }
+  #es-rc #es-rc-content .es-effects__text {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-effects .es-text-stroke {
+    width: 360px;
+  }
+  #es-rc #es-rc-content .es-effects__pack {
+    left: 0;
+  }
+  #es-rc #es-rc-content .es-effects__container {
+    width: 360px;
+    padding-right: 38px;
+    padding-block: 38px;
+  }
+  #es-rc #es-rc-content .es-effects__number {
+    font-size: 54px;
+  }
+  #es-rc #es-rc-content .es-effects__single {
+    padding: 8px;
+  }
+}
+@media (min-width: 930px) {
+  #es-rc #es-rc-content .es-effects .es-text-stroke {
+    width: 430px;
+  }
+  #es-rc #es-rc-content .es-effects__container {
+    width: 430px;
+    padding-right: 48px;
+    padding-block: 48px;
+  }
+  #es-rc #es-rc-content .es-effects__text {
+    font-size: 14px;
   }
 }
 #es-rc #es-rc-content .es-cross {
